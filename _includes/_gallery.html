@@ -1,0 +1,19 @@
+<script type="text/javascript">
+window.onload = function(){
+  load("{{ page.id }}");
+}
+</script>
+
+<div id="gallery">
+    <table>
+        <tr>
+			<noscript>
+			{% for img in page.imgs %}
+				<td>
+					<img src={{img}}>
+				</td>
+			{% endfor %}
+			</noscript>
+    	</tr>
+    </table>
+</div>
