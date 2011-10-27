@@ -14,5 +14,5 @@ To setup make sure you have a working Jekyll install. Then run:
 The sites files will compile into the _site directory.
 
 ##Made with
-*Jeykll
-*HTML 5 Boilerplate
+* [Jekyll] (https://github.com/mojombo/jekyll/wiki)
+* [HTML 5 Boilerplate 2.0] (http://html5boilerplate.com/)
