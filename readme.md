@@ -8,6 +8,7 @@ The goal of this site it to make a cross-browser static site that does not requi
 To setup make sure you have a working Jekyll install. Then run:
 
 >cd jnbphotovideo.com
+>
 >Jekyll
 
 The sites files will compile into the _site directory.
