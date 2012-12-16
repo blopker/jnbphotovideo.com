@@ -25,7 +25,6 @@ define(['flickr', 'vimeo', 'jquery'], function(Flickr, Vimeo, $) {
         'html': new HTMLSource()
       };
       this._createNav();
-      console.log(options);
     },
     _createNav: function() {
       var nav = $('<nav><ul></ul></nav>');
@@ -71,8 +70,10 @@ define(['flickr', 'vimeo', 'jquery'], function(Flickr, Vimeo, $) {
       this._setNavHighlight(pageID);
       var self = this;
       var page = this._getPage(pageID);
+      // console.log('leaving page');
       this._transitionOut(function() {
         self._getPageItems(page, function(results) {
+          // console.log('got items');
           self._transitionIn(results, callback);
         });
       });

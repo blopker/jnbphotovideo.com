@@ -32,7 +32,15 @@ require(['app', 'jquery', 'routie', 'fancybox', 'mousewheel'], function(App, $, 
       }
     });
 
-    $('.strip a').fancybox();
+    $('.strip a').fancybox({
+      openEffect : 'elastic',
+      openSpeed  : 150,
+
+      closeEffect : 'elastic',
+      closeSpeed  : 150,
+
+      closeClick : true
+    });
 
     // Scroll sideways.
     $(window).mousewheel(function(event, delta) {

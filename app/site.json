@@ -16,13 +16,13 @@
       "source": "flickr",
       "tag": "automotivepage"
     },
-    "portrait": {
-      "source": "flickr",
-      "tag": "portraitpage"
-    },
     "landscape": {
       "source": "flickr",
       "tag": "landscapepage"
+    },
+    "portrait": {
+      "source": "flickr",
+      "tag": "portraitpage"
     },
     "video": {
       "source": "vimeo",

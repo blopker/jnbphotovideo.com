@@ -33,7 +33,7 @@ define(['jquery'], function($) {
       return photos;
     },
     _createPhotoLink: function(photoURL) {
-      var link = $('<a>').attr('href', photoURL).attr('target', '_blank');
+      var link = $('<a>').attr('href', photoURL).attr('target', '_blank').attr('rel', 'gallery');
       var img = $('<img>').attr('src', photoURL);
       link.append(img);
       return link;
