@@ -29,14 +29,14 @@ require(['app', 'jquery', 'routie', 'fancybox', 'mousewheel'], function(App, $, 
         });
       },
       '': function() {
-        app.go('wedding');
+        app.go('home');
       }
     });
 
     $('.strip a').fancybox();
 
     // Scroll sideways.
-    $(window).mousewheel(function(event, delta, deltaX, deltaY) {
+    $(window).mousewheel(function(event, delta) {
       window.scrollBy(delta * -100,0);
       event.preventDefault();
     });
