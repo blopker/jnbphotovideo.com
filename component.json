@@ -1,7 +1,9 @@
 {
   "author": "BlueGouda",
   "name": "jnbphotovideo",
-  "version": "0.0.1",
-  "dependencies": {"routie":"~0.3.0"},
+  "version": "0.0.2",
+  "dependencies": {"routie":"~0.3.0",
+                  "fancybox":"~2.1.3",
+                  "jquery-mousewheel":"~3.0.6"},
   "devDependencies": {}
 }
