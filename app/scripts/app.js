@@ -1,5 +1,15 @@
 define(['flickr', 'vimeo', 'jquery'], function(Flickr, Vimeo, $) {
   'use strict';
+
+  // Source to get html snippets.
+  function HTMLSource() {
+    return {
+      get: function(page, callback) {
+        callback($('#' + page.id).clone().show());
+      }
+    };
+  }
+
   function App (options) {
     this._init(options);
     return this;
@@ -11,7 +21,8 @@ define(['flickr', 'vimeo', 'jquery'], function(Flickr, Vimeo, $) {
       this.pages = options.pages;
       this.sources = {
         'flickr': new Flickr(options.flickr),
-        'vimeo': new Vimeo()
+        'vimeo': new Vimeo(),
+        'html': new HTMLSource()
       };
       this._createNav();
       console.log(options);
@@ -49,6 +60,9 @@ define(['flickr', 'vimeo', 'jquery'], function(Flickr, Vimeo, $) {
           }
         });
     },
+    _getPage: function(pageID) {
+      return this.pages[pageID] || this.pages.home;
+    },
     _setNavHighlight: function(pageID) {
       $('nav a').removeClass('active');
       $('nav a[href=#' + pageID + ']').addClass('active');
@@ -56,7 +70,7 @@ define(['flickr', 'vimeo', 'jquery'], function(Flickr, Vimeo, $) {
     go: function(pageID, callback) {
       this._setNavHighlight(pageID);
       var self = this;
-      var page = this.pages[pageID] || this.pages.home;
+      var page = this._getPage(pageID);
       this._transitionOut(function() {
         self._getPageItems(page, function(results) {
           self._transitionIn(results, callback);

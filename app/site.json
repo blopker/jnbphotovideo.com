@@ -4,13 +4,13 @@
       "source": "vimeo",
       "videos": ["53605856"]
     },
-    "wedding": {
-      "source": "flickr",
-      "tag": "weddingpage"
-    },
     "product": {
       "source": "flickr",
       "tag": "productpage"
+    },
+    "wedding": {
+      "source": "flickr",
+      "tag": "weddingpage"
     },
     "automotive": {
       "source": "flickr",
@@ -27,6 +27,10 @@
     "video": {
       "source": "vimeo",
       "videos": ["10042135", "7783627", "17005136", "7173715", "7173673", "1011573", "3387112", "10100252"]
+    },
+    "about": {
+      "source": "html",
+      "id": "about"
     }
   },
   "flickr": {

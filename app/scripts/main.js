@@ -23,7 +23,6 @@ require(['app', 'jquery', 'routie', 'fancybox', 'mousewheel'], function(App, $, 
 
     routie({
       ':page': function(page) {
-        console.log(page);
         app.go(page, function() {
           window.scrollTo(0,0);
         });

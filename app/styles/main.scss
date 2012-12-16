@@ -24,6 +24,7 @@ header{
 }
 
 nav {
+  background-image: url(../images/45degreee_fabric.png);
   position: fixed;
   top: 99px;
   left: 0;
@@ -87,9 +88,14 @@ body{
   float: left;
   background-color: #E3E3E3;
   height:580px;
-  // min-width: 200px;
   outline: 1px solid #ddd;
   border-top: 1px solid #fff;
+}
+
+#about{
+  .about-text{
+    width: 200px;
+  }
 }
 
 #gallery{

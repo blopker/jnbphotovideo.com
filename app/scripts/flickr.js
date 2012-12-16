@@ -24,7 +24,6 @@ define(['jquery'], function($) {
     _getParsedPhotos: function(response) {
       var self = this;
       var photos = [];
-      console.log(response);
       $.each(response.photos.photo, function() {
         var largestSize = this.url_o || this.url_l || this.url_z || this.url_m;
         if(largestSize){
