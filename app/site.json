@@ -1,0 +1,36 @@
+{
+  "pages": {
+    "home": {
+      "source": "vimeo",
+      "videos": ["27127177"]
+    },
+    "product": {
+      "source": "flickr",
+      "tag": "productpage"
+    },
+    "wedding": {
+      "source": "flickr",
+      "tag": "weddingpage"
+    },
+    "automotive": {
+      "source": "flickr",
+      "tag": "automotivepage"
+    },
+    "portrait": {
+      "source": "flickr",
+      "tag": "portraitpage"
+    },
+    "landscape": {
+      "source": "flickr",
+      "tag": "landscapepage"
+    },
+    "video": {
+      "source": "vimeo",
+      "videos": ["27127177", "27127177", "27127177"]
+    }
+  },
+  "flickr": {
+    "user": "39659820@N00",
+    "apiKey": "6a6e8ec332516ebd042382f62afdb1fc"
+  }
+}
