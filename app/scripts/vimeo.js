@@ -15,7 +15,7 @@ define(['jquery'], function($) {
     _makeIframes: function(videoIDs) {
       var iframes = [];
       $.each(videoIDs, function() {
-        var iframe = '<iframe src="http://player.vimeo.com/video/' + this + '?portdait=0" width="900px" height="530px"></iframe>';
+        var iframe = $('<iframe src="http://player.vimeo.com/video/' + this + '?portdait=0" width="900px" height="530px"></iframe>');
         iframes.push(iframe);
       });
       return iframes;

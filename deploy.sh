@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
 
-#yeoman build
+yeoman build
 
-
+PROJECT=jnbphotovideo
 DIR="dev"
 
 if [[ $1 = "pro" ]]; then
   DIR="production"
 fi
-
-scp -r dist/* gouda@blopker.com:public/$DIR/jnbphotovideo
+rsync -avc dist/* gouda@blopker.com:public/$DIR/$PROJECT
