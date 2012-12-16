@@ -22,24 +22,29 @@ define(['jquery'], function($) {
       return URL;
     },
     _getParsedPhotos: function(response) {
+      var self = this;
       var photos = [];
       console.log(response);
       $.each(response.photos.photo, function() {
         var largestSize = this.url_o || this.url_l || this.url_z || this.url_m;
         if(largestSize){
-          photos.push(largestSize);
+          photos.push(self._createPhotoLink(largestSize));
         }
       });
       return photos;
     },
-    get: function(tag, callback) {
+    _createPhotoLink: function(photoURL) {
+      var link = $('<a>').attr('href', photoURL).attr('target', '_blank');
+      var img = $('<img>').attr('src', photoURL);
+      link.append(img);
+      return link;
+    },
+    get: function(page, callback) {
       var self = this;
-      var url = this._getURL(tag);
+      var url = this._getURL(page.tag);
       $.getJSON(url, function(response) {
         var photos = self._getParsedPhotos(response);
-        if (callback) {
-          callback(photos);
-        }
+        callback(photos);
       });
     }
   };

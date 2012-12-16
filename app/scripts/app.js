@@ -22,9 +22,21 @@ define(['flickr', 'jquery'], function(Flickr, $) {
       });
       $('header').after(nav);
     },
-    go: function(pageID) {
+    go: function(pageID, callback) {
       var page = this.pages[pageID] || this.pages.home;
-      this.sources[page.source].get(page);
+      this.sources[page.source].get(page, function(results) {
+        var gallery = $('#gallery');
+        gallery.fadeOut(function() {
+          gallery.empty();
+          $.each(results, function() {
+            gallery.append(this);
+          });
+          gallery.fadeIn();
+          if (callback) {
+            callback();
+          }
+        });
+      });
     }
   };
   return App;
