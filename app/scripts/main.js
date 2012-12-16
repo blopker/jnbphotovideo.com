@@ -3,11 +3,15 @@ require.config({
   },
 
   paths: {
-    jquery: 'vendor/jquery.min'
+    jquery: 'vendor/jquery.min',
+    routie: '../components/routie/dist/routie.min'
   }
 });
- 
-require(['app'], function(app) {
-  // use app here
-  console.log(app);
+
+require(['app', 'jquery', 'routie'], function(App, $, routie) {
+  'use strict';
+  $.getJSON('site.json', function(options) {
+    var app = new App(options);
+    app.go('wedding');
+  });
 });
