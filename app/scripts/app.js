@@ -27,11 +27,11 @@ define(['flickr', 'vimeo', 'jquery'], function(Flickr, Vimeo, $) {
       this._createNav();
     },
     _createNav: function() {
-      var nav = $('<nav><ul></ul></nav>');
+      var nav = $('<ul>');
       $.each(this.pages, function(pageName) {
-        $('ul', nav).append('<li><a href=#' + pageName + '>' + pageName + '</li>');
+        $(nav).append('<li><a href=#' + pageName + '>' + pageName + '</li>');
       });
-      $('header').after(nav);
+      $('nav').append(nav);
     },
     _getPageItems: function(page, callback) {
       var source = this.sources[page.source];

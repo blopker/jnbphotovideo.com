@@ -44,7 +44,7 @@ require(['app', 'jquery', 'routie', 'fancybox', 'mousewheel'], function(App, $, 
 
     // Scroll sideways.
     $(window).mousewheel(function(event, delta) {
-      window.scrollBy(delta * -100,0);
+      $('#gallery').scrollLeft($('#gallery').scrollLeft() + (delta * -100));
       event.preventDefault();
     });
   });
