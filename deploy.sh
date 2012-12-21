@@ -8,4 +8,4 @@ DIR="dev"
 if [[ $1 = "pro" ]]; then
   DIR="production"
 fi
-rsync -avc dist/* gouda@blopker.com:public/$DIR/$PROJECT
+rsync -ahvc --delete dist/* gouda@blopker.com:public/$DIR/$PROJECT

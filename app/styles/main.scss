@@ -1,12 +1,13 @@
-$sansFontFamily: 'PT Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700);
+
+$sansFontFamily: 'PT Sans', Arial, sans-serif;
 
 $linkColor: #424242;
 $backgroundColor: #121212;
 $footerHeight: 30px;
 
 @import "compass_twitter_bootstrap";
-@import "_fancybox.css";
-@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700);
+@import "fancybox";
 
 html,
 body {
@@ -157,5 +158,4 @@ footer {
 
 footer {
   text-align: center;
-  // background-color: #f5f5f5;
 }
