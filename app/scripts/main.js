@@ -48,4 +48,7 @@ require(['app', 'jquery', 'routie', 'fancybox', 'mousewheel'], function(App, $, 
       event.preventDefault();
     });
   });
+
+  // Set copyright year.
+  $('.year').html(new Date().getFullYear());
 });
