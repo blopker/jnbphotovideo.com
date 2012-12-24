@@ -5,14 +5,16 @@ require.config({
     jquery: 'vendor/jquery.min',
     routie: '../components/routie/dist/routie.min',
     fancybox: '../components/fancybox/source/jquery.fancybox.pack',
-    mousewheel: '../components/jquery-mousewheel/jquery.mousewheel'
+    mousewheel: '../components/jquery-mousewheel/jquery.mousewheel',
+    imagesloaded: '../components/imagesloaded/jquery.imagesloaded.min'
   },
   shim: {
     'routie':{
       exports: 'routie'
     },
     'fancybox': ['jquery'],
-    'mousewheel': ['jquery']
+    'mousewheel': ['jquery'],
+    'imagesloaded': ['jquery']
   }
 });
 

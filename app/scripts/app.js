@@ -1,4 +1,4 @@
-define(['flickr', 'vimeo', 'jquery'], function(Flickr, Vimeo, $) {
+define(['flickr', 'vimeo', 'jquery', 'imagesloaded'], function(Flickr, Vimeo, $, imagesLoaded) {
   'use strict';
 
   // Source to get html snippets.
@@ -50,14 +50,18 @@ define(['flickr', 'vimeo', 'jquery'], function(Flickr, Vimeo, $) {
     },
     _transitionIn: function(items, callback) {
       var gallery = $('#gallery');
-        $.each(items, function() {
-          gallery.append(this);
+      $.each(items, function() {
+        $(this).hide();
+        $(this).imagesLoaded(function() {
+          $(this).fadeIn();
         });
-        gallery.fadeIn(function() {
-          if (callback) {
-            callback();
-          }
-        });
+        gallery.append(this);
+      });
+      gallery.fadeIn(function() {
+        if (callback) {
+          callback();
+        }
+      });
     },
     _getPage: function(pageID) {
       return this.pages[pageID] || this.pages.home;
