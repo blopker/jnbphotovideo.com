@@ -27,14 +27,14 @@ define(['jquery'], function($) {
       $.each(response.photos.photo, function() {
         var largestSize = this.url_o || this.url_l || this.url_z || this.url_m;
         if(largestSize){
-          photos.push(self._createPhotoLink(largestSize));
+          photos.push(self._createPhotoLink(this.url_z, largestSize));
         }
       });
       return photos;
     },
-    _createPhotoLink: function(photoURL) {
-      var link = $('<a>').attr('href', photoURL).attr('target', '_blank').attr('rel', 'gallery');
-      var img = $('<img>').attr('src', photoURL);
+    _createPhotoLink: function(photoURLsmall, photoURLlarge) {
+      var link = $('<a>').attr('href', photoURLlarge).attr('target', '_blank').attr('rel', 'gallery');
+      var img = $('<img>').attr('src', photoURLsmall);
       link.append(img);
       return link;
     },
