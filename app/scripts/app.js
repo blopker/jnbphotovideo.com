@@ -70,10 +70,9 @@ define(['flickr', 'vimeo', 'jquery'], function(Flickr, Vimeo, $) {
       this._setNavHighlight(pageID);
       var self = this;
       var page = this._getPage(pageID);
-      // console.log('leaving page');
-      this._transitionOut(function() {
-        self._getPageItems(page, function(results) {
-          // console.log('got items');
+      // console.log('leaving page');\
+      this._getPageItems(page, function(results) {
+        self._transitionOut(function() {
           self._transitionIn(results, callback);
         });
       });
