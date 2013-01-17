@@ -2,17 +2,16 @@
 
 ##The photography portfolio for the Lazy Photographer.
 
+[Demo](http://jnbphotovideo.com)
+
 The goal of this site it to make a cross-browser static site that does not require the maintainer to know anything about web sites. Namely, updating the site’s content ishandled by adding new photos to Flickr with the appropriate tags.
+The site also supports Vimeo.
 
 ##Setup
-To setup make sure you have a working Jekyll install. Then run:
+To setup make sure you have a working Yeoman install. Then run:
 
->cd jnbphotovideo.com
->
->Jekyll
-
-The sites files will compile into the _site directory.
+>yeoman server
 
 ##Made with
-* [Jekyll] (https://github.com/mojombo/jekyll/wiki)
+* [Yeoman] (http://yeoman.io/)
 * [HTML 5 Boilerplate 2.0] (http://html5boilerplate.com/)
