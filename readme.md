@@ -14,4 +14,5 @@ To setup make sure you have a working Yeoman install. Then run:
 
 ##Made with
 * [Yeoman] (http://yeoman.io/)
-* [HTML 5 Boilerplate 2.0] (http://html5boilerplate.com/)
+* [Bootstrap](http://twitter.github.com/bootstrap/)
+* [Requirejs](http://requirejs.org/)
